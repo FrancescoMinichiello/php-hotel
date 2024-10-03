@@ -99,17 +99,17 @@ $hotels = [
                     <th scope="col">Distance to center</th>
                 </tr>
             </thead>
-            <?php foreach ($hotels as $hotel) { ?>
             <tbody class="text-center">
-                <tr>
-                    <th><?= $hotel["name"]; ?></th>
-                    <td><?= $hotel["description"]; ?></td>
-                    <td><?= $hotel["parking"] ? "Sì" : "No"; ?></td>
-                    <td><?= $hotel["vote"]; ?></td>
-                    <td><?= $hotel["distance_to_center"]; ?> Km</td>
-                </tr>
+                <?php foreach ($hotels as $hotel) { ?>
+                    <tr>
+                        <th><?= $hotel["name"]; ?></th>
+                        <td><?= $hotel["description"]; ?></td>
+                        <td><?= $hotel["parking"] ? "Sì" : "No"; ?></td>
+                        <td><?= $hotel["vote"]; ?></td>
+                        <td><?= $hotel["distance_to_center"]; ?> Km</td>
+                    </tr>
+                <?php  } ?>
             </tbody>
-            <?php  } ?>
         </table>
     </section>
 </body>
