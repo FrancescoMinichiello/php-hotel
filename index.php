@@ -55,6 +55,39 @@ $hotels = [
 </head>
 
 <body>
+    <!--Form-->
+    <section class="bg-primary text-white py-5">
+        <form class="text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Filtra gli hotel che hanno un parcheggio</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option>Si</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Filtra gli hotel per voto</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option selected>--</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-warning mt-5 fw-semibold">Cerca</button>
+        </form>
+    </section>
+    <!-- Table-->
     <section>
         <table class="table table-striped table-dark">
             <thead class="text-center">
