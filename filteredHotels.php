@@ -40,6 +40,14 @@ $hotels = [
 
 ];
 
+$parking = $_GET["parking"];
+var_dump($parking);
+
+$vote = $_GET["vote"];
+var_dump($vote);
+
+
+
 ?>
 
 
