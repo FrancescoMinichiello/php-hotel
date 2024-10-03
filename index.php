@@ -100,7 +100,7 @@ $hotels = [
                 </tr>
             </thead>
             <?php foreach ($hotels as $hotel) { ?>
-            <tbody class="text-center" foreach($hotels as $hotel)>
+            <tbody class="text-center">
                 <tr>
                     <th><?= $hotel["name"]; ?></th>
                     <td><?= $hotel["description"]; ?></td>

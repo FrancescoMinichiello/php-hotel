@@ -40,13 +40,18 @@ $hotels = [
 
 ];
 
-$parking = $_GET["parking"];
-var_dump($parking);
 
-$vote = $_GET["vote"];
-var_dump($vote);
+$parking = isset($_GET['parking']) && $_GET['parking'] === 'Si' ? true : false;
+$vote = isset($_GET['vote']) ? $_GET['vote'] : 0;
 
+$filteredHotels = [];
 
+foreach ($hotels as $hotel) {
+    // Verifica se il parcheggio e il voto corrispondono ai criteri selezionati
+    if (($hotel['parking'] == $parking) && ($hotel['vote'] >= $vote)) {
+        $filteredHotels[] = $hotel;
+    }
+}
 
 ?>
 
@@ -107,17 +112,17 @@ var_dump($vote);
                     <th scope="col">Distance to center</th>
                 </tr>
             </thead>
-            <?php foreach ($hotels as $hotel) { ?>
-            <tbody class="text-center" foreach($hotels as $hotel)>
+            <?php foreach ($filteredHotels as $hotel) { ?>
+            <tbody class="text-center">
                 <tr>
-                    <th><?= $hotel["name"]; ?></th>
+                    <td><?= $hotel["name"]; ?></td>
                     <td><?= $hotel["description"]; ?></td>
                     <td><?= $hotel["parking"] ? "Sì" : "No"; ?></td>
                     <td><?= $hotel["vote"]; ?></td>
                     <td><?= $hotel["distance_to_center"]; ?> Km</td>
                 </tr>
             </tbody>
-            <?php  } ?>
+            <?php } ?>
         </table>
     </section>
 </body>
